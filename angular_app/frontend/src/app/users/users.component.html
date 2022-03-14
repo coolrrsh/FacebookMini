@@ -1,0 +1,8 @@
+<div>
+    <mat-card>
+     <div *ngFor= "let user of apiService.users">
+      <mat-card [routerLink]="['/profile',user._id]" style="cursor: pointer">{{user.email}}</mat-card><br>
+        
+   </div>
+  </mat-card>
+  </div>

@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>
+        <h5> New Post </h5>  
+    </mat-card-title>
+
+<form class="Login">
+
+    <mat-form-field class="Input" appearance="fill">
+        <mat-label>Write Something...</mat-label>
+        <textarea [(ngModel)]= "postMsg" [ngModelOptions]= "{standalone: true}"   matInput  ></textarea>
+        </mat-form-field>
+        <div></div>
+    
+      <mat-card-footer>
+        <button (click)="post()"  mat-raised-button class="postBtn" color="primary"> Post </button>
+      </mat-card-footer>
+
+  </form>
+  </mat-card>

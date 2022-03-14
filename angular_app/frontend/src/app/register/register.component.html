@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title>
+        <h5> User Registration </h5>  
+    </mat-card-title>
+
+<form class="Login">
+
+    <mat-form-field class="Input" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="registerData.name" [ngModelOptions]="{standalone: true}" type="text" matInput required >
+        </mat-form-field>
+        <div></div>
+    
+    <mat-form-field class="Input" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input  type="email" matInput [formControl]= "emailFormControl" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field><div></div>
+
+    
+    
+    <mat-form-field class="Input" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]= "passwordFormControl" >
+        <mat-error *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+          Please enter a valid password
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      
+      <mat-form-field class="Bio"  appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea [(ngModel)]="registerData.description" [ngModelOptions]="{standalone: true}"  matInput  ></textarea>
+          </mat-form-field>
+
+      <mat-card-footer>
+        <button (click)="post()" mat-raised-button class="registerBtn" color="primary"> Register </button>
+      </mat-card-footer>
+
+  </form>
+  </mat-card>

@@ -1,0 +1,15 @@
+.Login {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .Input {
+    width: 100%;
+  }
+
+  .LoginBtn{
+      margin-left: 1.2em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+  }

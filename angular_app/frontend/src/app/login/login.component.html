@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>
+        <h4> Login </h4>  
+    </mat-card-title>
+
+<form class="Login">
+    
+    <mat-form-field class="Input" appearance="fill">
+
+      <mat-label>Email</mat-label>
+      <input [(ngModel)]="loginData.email" [ngModelOptions]="{standalone: true}" type="email" matInput  placeholder="Ex. pat@example.com">
+      
+    </mat-form-field>
+    
+    
+    <mat-form-field class="Input" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input [(ngModel)]="loginData.pwd" [ngModelOptions]="{standalone: true}" type="password" matInput  placeholder="password">
+        
+    
+      </mat-form-field>
+      <mat-card-footer>
+        <button (click)="post()" mat-raised-button class="LoginBtn" color="primary"> Login </button>
+      </mat-card-footer>
+
+  </form>
+  </mat-card>
